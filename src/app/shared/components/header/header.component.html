@@ -1,0 +1,87 @@
+<<<<<<< HEAD
+<header class="p-0">
+  <!-- &#9776; -->
+  <section class="container m-1 mx-auto flex flex-row justify-between">
+    <a routerLink="home"
+      ><img
+        src="../../../../assets/logo.svg"
+        alt="ThinkFlow's Logo"
+        class="w-48 rounded"
+    /></a>
+    <button
+      id="toggle-list-btn"
+      role="button"
+      class="text-indigo-700 text-4xl md:hidden focus:outline-none"
+    >
+      &#9776;
+    </button>
+    <nav class="hidden md:flex md:flex-row mt-1" aria-label="header's links">
+      @if (this.isLogged === true) {
+        <div class="flex felx-row">
+          <a
+            routerLink="newpost"
+            class="py-2 px-3 rounded text-indigo-300 bg-indigo-800 hover:text-indigo-100 border-2 border-indigo-50 dark:border-indigo-950 hover:border-indigo-700"
+          >
+            <span>New Post</span>
+          </a>
+          <a
+            routerLink="profile/boda"
+            class="p-2 text-indigo-500 dark:text-indigo-800 hover:transition-all hover:text-indigo-700 texr-xl hover:underline"
+          >
+            <span>{{ useName }}</span>
+          </a>
+          <a
+            (click)="signout()"
+            routerLink="home"
+            class="p-2 text-indigo-200 dark:text-indigo-800 hover:transition-all hover:text-indigo-700 texr-xl hover:underline"
+          >
+            Sing out
+          </a>
+        </div>
+      } @else {
+        <div class="flex felx-row justify-between">
+          <a
+            routerLink="signin"
+            (click)="signin()"
+            class="flex flex-col items-center py-1 px-4 border-indigo-300 border-2 hover:border-indigo-600 bg-white text-indigo-300 rounded hover:transition-all hover:text-indigo-600"
+          >
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Sign in</span>
+          </a>
+          <a
+            routerLink="signup"
+            (click)="signup()"
+            class="flex flex-col items-center py-1 ml-px px-4 bg-indigo-600 border-2 text-indigo-300 rounded hover:text-indigo-100 hover:border-indigo-400 hover:transition-all dark:border-slate-950"
+          >
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <span>Sign Up</span>
+          </a>
+        </div>
+      }
+    </nav>
+  </section>
+=======
+<header class="container mx-auto px-4">
+  <div>
+    <img
+      class="w-44"
+      src="../../../../assets/logo.PNG"
+      alt="Think flow logo element"
+      routerLink="/home"
+    />
+    <div class="links">
+      <ul class="user" >
+        <li><a>New Post</a></li>
+        <li>
+          <a>{{ userName }}</a>
+        </li>
+        <li><a>Sign out</a></li>
+      </ul>
+      <ul class="auth">
+        <li><a>Sign in</a></li>
+        <li><a>Sign up</a></li>
+      </ul>
+    </div>
+  </div>
+>>>>>>> 1b6f6f86d5e73bbd25ae27fe432e6c0d563c1a97
+</header>
