@@ -1,1 +1,17 @@
-<p>home works!</p>
+<section class="container mt-4 m-auto text-indigo-950">
+  @for(post of posts;track $index){
+    <section class="post">
+      <div class="flex flex-wrap ">
+        <a class="min-w-fit px-2 mr-px font-bold hover:text-indigo-600 hover:cursor-pointer">{{post.title}}</a>
+        <a class="px-2 hover:text-indigo-600 hover:cursor-pointer">({{post.url}})</a>
+        <a class="px-2 hover:text-indigo-600 hover:cursor-pointer">{{post.comments}}comments</a>
+      </div>
+      <div class="flex">
+        <span class=" px-2">{{post.points}} points | </span>
+        <a class="px-2 hover:text-indigo-600 hover:cursor-pointer">{{post.username}}</a>
+      </div>
+    </section>
+  }@empty {
+    <p>No posts yet</p>
+  }
+</section>
